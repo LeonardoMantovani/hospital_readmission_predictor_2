@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<number_inpatient_log &le; 0.0<br/>gini = 0.5<br/>samples = 127219<br/>value = [63827, 63392]<br/>class = No>, fillcolor="#fffefe"] ;
+1 [label=<discharge_disposition_id_2 &le; 0.5<br/>gini = 0.475<br/>samples = 72666<br/>value = [44503.0, 28163.0]<br/>class = No>, fillcolor="#f5d1b6"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<time_in_hospital &le; -1.14<br/>gini = 0.443<br/>samples = 54631<br/>value = [36513, 18118]<br/>class = No>, fillcolor="#f2c09b"] ;
+1 -> 2 ;
+3 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 3 ;
+1328 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 1328 ;
+6873 [label=<number_diagnoses &le; 0.815<br/>gini = 0.494<br/>samples = 18035<br/>value = [7990, 10045]<br/>class = Readm>, fillcolor="#d6ebfa"] ;
+1 -> 6873 ;
+6874 [label="(...)", fillcolor="#C0C0C0"] ;
+6873 -> 6874 ;
+8215 [label="(...)", fillcolor="#C0C0C0"] ;
+6873 -> 8215 ;
+9948 [label=<number_inpatient_log &le; 0.693<br/>gini = 0.457<br/>samples = 54553<br/>value = [19324, 35229]<br/>class = Readm>, fillcolor="#a6d3f3"] ;
+0 -> 9948 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9949 [label=<gini = 0.0<br/>samples = 11708<br/>value = [0, 11708]<br/>class = Readm>, fillcolor="#399de5"] ;
+9948 -> 9949 ;
+9950 [label=<number_inpatient_log &le; 0.693<br/>gini = 0.495<br/>samples = 42845<br/>value = [19324, 23521]<br/>class = Readm>, fillcolor="#dceefa"] ;
+9948 -> 9950 ;
+9951 [label="(...)", fillcolor="#C0C0C0"] ;
+9950 -> 9951 ;
+13842 [label="(...)", fillcolor="#C0C0C0"] ;
+9950 -> 13842 ;
+}
